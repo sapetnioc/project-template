@@ -1,0 +1,41 @@
+[project]
+name = "project-template"
+version = "0.0.1"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "CeCILL-B"}
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Natural Language :: English",
+]
+
+dependencies = [
+    "torch", 
+    "scikit-learn", 
+]
+
+
+[project.urls]
+repository = "https://github.com/sapetnioc/project-template"
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.pixi.project]
+channels = ["nvidia", "conda-forge", "bioconda", "pytorch", "https://fsl.fmrib.ox.ac.uk/fsldownloads/fslconda/public/", "https://brainvisa.info/neuro-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.dependencies]
+pytorch = "*"
+scikit-learn = "*"
